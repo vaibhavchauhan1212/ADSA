@@ -10,7 +10,6 @@ public class Solution {
             int area = h * width;
             maxArea = Math.max(maxArea, area);
 
-            // Move the pointer with the smaller height
             if (height[left] < height[right]) {
                 left++;
             } else {

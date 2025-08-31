@@ -4,28 +4,27 @@ public class Solution {
         int right = height.length - 1;
         int maxLeft = 0;
         int maxRight = 0;
-        int trappedWater = 0;
+        int Water = 0;
 
         while (left < right) {
             if (height[left] < height[right]) {
-                // Process left side
                 if (height[left] >= maxLeft) {
                     maxLeft = height[left];
                 } else {
-                    trappedWater += maxLeft - height[left];
+                    Water += maxLeft - height[left];
                 }
                 left++;
             } else {
-                // Process right side
+                
                 if (height[right] >= maxRight) {
                     maxRight = height[right];
                 } else {
-                    trappedWater += maxRight - height[right];
+                    Water += maxRight - height[right];
                 }
                 right--;
             }
         }
 
-        return trappedWater;
+        return Water;
     }
 }

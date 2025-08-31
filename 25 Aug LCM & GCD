@@ -1,6 +1,4 @@
 public class Solution {
-    
-    // Helper method to compute GCD using Euclidean algorithm
     private int gcd(int a, int b) {
         while (b != 0) {
             int temp = b;
@@ -10,7 +8,6 @@ public class Solution {
         return a;
     }
 
-    // Main method to return LCM and GCD as an array
     public int[] lcmAndGcd(int a, int b) {
         int gcdValue = gcd(a, b);
         int lcmValue = (a * b) / gcdValue;
